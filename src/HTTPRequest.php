@@ -21,7 +21,7 @@ class HTTPRequest
         $this->client = new GuzzleClient();
         $this->headers = array_filter([
             'Content-type' => 'application/json',
-            'X-Meili-API-Key' => $this->api_key,
+            'Authorization' => "Bearer {$this->api_key}",
         ]);
     }
 
